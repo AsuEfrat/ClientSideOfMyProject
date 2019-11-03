@@ -7,14 +7,16 @@ import { AppComponent } from './app.component';
 import { AddCustomerComponent } from './Components/add-customer/add-customer.component';
 import { HttpClientModule } from '@angular/common/http';
 import {CustomerService} from './Services/customer.service';
-import { WelcomeComponent } from './Components/welcome/welcome.component'
+import { WelcomeComponent } from './Components/welcome/welcome.component';
+import { ClubCardsComponent } from './Components/club-cards/club-cards.component'
 
 
 @NgModule({
   declarations: [
     AppComponent,
     AddCustomerComponent,
-    WelcomeComponent
+    WelcomeComponent,
+    ClubCardsComponent
   ],
   imports: [
     BrowserModule,
