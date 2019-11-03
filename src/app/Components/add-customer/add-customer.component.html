@@ -1,6 +1,17 @@
-<form (submit)="register()">
-    <input name="UserName" [(ngModel)]="customer.UserName">
-    <input name="Password" [(ngModel)]="customer.Password" >
-    <input name="Email" [(ngModel)]="customer.Email" type="email">
-<input type="submit" value="register">
+<div style="text-align:center" dir="rtl">
+  <h1> מילוי פרטי לקוח:</h1>
+</div>
+<form (submit)="register()" dir="rtl">
+    <div> <label> שם פרטי: </label><input name="FirstName"  [(ngModel)]="customerDetails.firstName">  </div>
+    <div> <label> שם משפחה: </label><input name="LastName"  [(ngModel)]="customerDetails.lastName">  </div>
+    <div> <label>תעודת זהות: </label><input name="Id"  [(ngModel)]="customerDetails.identity">  </div>
+    <div> <label> פלאפון: </label><input name="PhoneNumber"  [(ngModel)]="customerDetails.phoneNumber">  </div>
+    <div> <label>תאריך לידה:</label><input name="BirthDate"  [(ngModel)]="customerDetails.birthDate">  </div>
+    <div> <label>תאריך הצטרפות לאתר: </label><input name="JoinDate"  [(ngModel)]="customerDetails.JoinTheWebDate">  </div>
+    <div> <label>שם משתמש:</label><input name="UserName" [(ngModel)]="customer.UserName">  </div>
+    <div><label>סיסמה:</label> <input name="Password" [(ngModel)]="customer.Password" >   </div>
+    <div><label>E-mail:</label><input name="Email" [(ngModel)]="customer.Email" type="email">   </div>
+    <input type="submit" value="register">
+ 
+
 </form>

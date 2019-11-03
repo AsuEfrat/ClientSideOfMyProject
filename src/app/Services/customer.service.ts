@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Customer } from '../Models/customer';
 import { Observable } from 'rxjs';
+import { CustomerDetails } from '../Models/customerDetails';
 
 
 
@@ -21,7 +22,12 @@ import { Observable } from 'rxjs';
 
   addCustomer(customer:Customer):Observable<number>
   {
-    debugger
+   debugger
     return this.http.post<number>(this.url+"addcustomer",customer);
+  }
+  addCustomerDetails(customerD:CustomerDetails)
+  {
+    debugger
+    this.http.post<number>(this.url+"addCustomerDetails",customerD);
   }
 }

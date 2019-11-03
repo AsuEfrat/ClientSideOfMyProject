@@ -6,12 +6,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AddCustomerComponent } from './Components/add-customer/add-customer.component';
 import { HttpClientModule } from '@angular/common/http';
+import {CustomerService} from './Services/customer.service';
+import { WelcomeComponent } from './Components/welcome/welcome.component'
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    AddCustomerComponent
+    AddCustomerComponent,
+    WelcomeComponent
   ],
   imports: [
     BrowserModule,
@@ -21,7 +24,7 @@ import { HttpClientModule } from '@angular/common/http';
     FormsModule
   
   ],
-  providers: [],
+  providers: [CustomerService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
