@@ -1,0 +1,8 @@
+<h1 style="text-align:center" dir="rtl">מילוי פרטי בעל עסק</h1>
+<form (submit)="register()" dir=rtl>
+<div><label>שם משתמש</label><input name="UserName"  [(ngModel)]="customer.UserName"></div>
+<div><label>סיסמה</label><input name="Password" [(ngModel)]="customer.Password"></div>
+<div><label>Email</label><input name="Email" [(ngModel)]="customer.Email"></div>
+<div><label> Email אישי</label><input name="PersonalEmail" [(ngModel)]="businessOwner.PersonalEmail"></div>
+<input type="submit" value="register">
+</form>

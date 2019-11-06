@@ -3,12 +3,12 @@ export class CustomerDetails{
     customerCode:number;
     firstName:string;
     lastName:string;
-    identity:string;
+    id:string;
     phoneNumber:number;
     birthDate:Date;
     JoinTheWebDate:Date;
 
-    constractor()
+    constructor()
     {
 
     }

@@ -24,13 +24,15 @@ export class AddCustomerComponent implements OnInit {
     res=>{
          this.customerService.currentCustomer=res;
            alert(res);
-          this.customerDetails.customerCode=res}
+          this.customerDetails.customerCode=res;
+          this.customerService.addCustomerDetails(this.customerDetails).subscribe(
+     
+            )
+        }
           );
         
-   this.customerService.addCustomerDetails(this.customerDetails);
+   
     
-    
-     
-     }
+    }
 
 }

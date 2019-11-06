@@ -22,12 +22,11 @@ import { CustomerDetails } from '../Models/customerDetails';
 
   addCustomer(customer:Customer):Observable<number>
   {
-   debugger
     return this.http.post<number>(this.url+"addcustomer",customer);
   }
-  addCustomerDetails(customerD:CustomerDetails)
+  addCustomerDetails(customerD:CustomerDetails):Observable<void>
   {
     debugger
-    this.http.post<number>(this.url+"addCustomerDetails",customerD);
+    return this.http.post<void>(this.url+"addCustomerDetails",customerD);
   }
 }

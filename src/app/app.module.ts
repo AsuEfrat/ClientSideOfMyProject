@@ -8,7 +8,10 @@ import { AddCustomerComponent } from './Components/add-customer/add-customer.com
 import { HttpClientModule } from '@angular/common/http';
 import {CustomerService} from './Services/customer.service';
 import { WelcomeComponent } from './Components/welcome/welcome.component';
-import { ClubCardsComponent } from './Components/club-cards/club-cards.component'
+import { ClubCardsComponent } from './Components/club-cards/club-cards.component';
+import { CustomerBusinessManagerComponent } from './Components/customer-business-manager/customer-business-manager.component';
+import { BusinessOwnerComponent } from './Components/business-owner/business-owner.component'
+import { BusinessOwnerService } from './Services/business-owner.service';
 
 
 @NgModule({
@@ -16,7 +19,9 @@ import { ClubCardsComponent } from './Components/club-cards/club-cards.component
     AppComponent,
     AddCustomerComponent,
     WelcomeComponent,
-    ClubCardsComponent
+    ClubCardsComponent,
+    CustomerBusinessManagerComponent,
+    BusinessOwnerComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +31,7 @@ import { ClubCardsComponent } from './Components/club-cards/club-cards.component
     FormsModule
   
   ],
-  providers: [CustomerService],
+  providers: [CustomerService,BusinessOwnerService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
