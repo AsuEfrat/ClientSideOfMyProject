@@ -1,0 +1,43 @@
+<!-- <div dir="rtl"    class="personal" > -->
+<!-- <nav class="personal;navbar navbar-expand-md bg-dark navbar-dark fixed-top;" >
+
+<ul class="navbar-nav mr-auto" dir="rtl">
+ <li class="nav-item" dir="rtl">
+    <a class="nav-link" (click)="showCardDetails()" dir="rtl">פרטי כרטיס</a>
+</li>
+<li class="nav-item" dir="rtl">
+    <a class="nav-link" (click)="getSales()" dir="rtl">עדכונים ומבצעים</a>
+</li>
+</ul>
+
+ </nav>
+ </div> -->
+
+   <div class="personal" dir="rtl" style="padding: 0px;margin-right: 11.9em;">   
+    <h1 style=" padding-right: 3em; letter-spacing: 0px; font-size: x-large; margin-right: 50px; margin-bottom:0em;float:inline-start; font-weight: normal ;display: block; text-align: right; margin-top: 30px;" class="masthead-brand" >שלום<a style="margin-top: 30px; font-weight: normal; font-size: x-large;  margin-right: 10px;  color: #007bff; text-align: right;">{{FirstName}}</a>  <button   class="exit"  type="btn">יציאה</button></h1>
+    <h1 class="masthead-brand" >הארנק שלך</h1>  
+    
+  <div class="frm">
+    <div>
+      <a style="color: #007bff; cursor: pointer; padding-right: 12em; padding-left: 12em; padding-bottom: 0.5em; padding-top: 0.5em; margin-right: 2em; margin-top: 1em; border-radius: 10px; text-align: center;  float: right;   text-align: center; background: rgba(199, 221, 247, 0.5); " (click)="showCardDetails()" >פרטי כרטיס</a>
+      <a style="cursor: pointer; padding-right: 12em; padding-left: 12em; padding-bottom: 0.5em; padding-top: 0.5em; margin-left: 2em; margin-top: 1em; border-radius: 10px; text-align: center; float: left;   text-align: center;      background: rgba(199, 221, 247, 0.5); " (click)="getSales()" > מבצעים</a>
+    </div>
+
+    <img style="float: left; margin-top: 3em; margin-left: 5em;" src='https://localhost:44380/Images/{{img}}'>
+ 
+    
+
+ <div *ngIf="NotConected==true" style="text-align: right;">
+  <div  dir="rtl" style="margin-right: 3em; padding-top: 7.5em; font-weight: normal;" > <label >שם חנות: </label><label style=" margin-right: 1em;" *ngFor="let s of allStores">{{s}}</label></div>
+  <div dir="rtl" style="margin-right: 3em; margin-top: 1em; font-weight: normal;"  *ngIf="ThisChain!=null"> <label>צור קשר: </label><label style=" margin-right: 1em;">{{ThisChain.PhoneNumber}}</label></div>
+  <div dir="rtl" style="margin-right: 3em; margin-top: 1em; font-weight: normal;"  *ngIf="ThisChain!=null"> <label >קישור לאתר החנות: </label> <a style=" margin-right: 1em;" href="https://{{ThisChain.ChainWebsite}}"> {{ThisChain.ChainWebsite}}</a></div>
+  <div dir="rtl" style="margin-right: 3em; margin-top: 1em; font-weight: normal;"> <label >מספר נקודות:</label><label style=" margin-right: 1em;">{{clubcard.CurrentPoints}}</label></div>
+  <div dir="rtl" style="margin-right: 3em; margin-top: 1em; font-weight: normal;"> <label>תאריך הצטרפות למועדון:</label><label style=" margin-right: 1em;">{{clubcard.JoinDate|date:"MM/dd/yyyy"}}</label></div>
+  <div dir="rtl" style="margin-right: 3em; margin-top: 1em; font-weight: normal;"> <label>תוקף המועדון:</label><label style=" margin-right: 1em;" >{{ValidFor|date:"MM/dd/yyyy"}}</label></div>
+  <hr/>
+ </div>
+ <div *ngIf="NotConected==false">
+   <h1 style="text-align: center;">תוכל לראות את פרטי הכרטיס והמועדון רק לאחר שתבצע את הקנייה הראשונה</h1>
+</div>
+</div>
+</div>   

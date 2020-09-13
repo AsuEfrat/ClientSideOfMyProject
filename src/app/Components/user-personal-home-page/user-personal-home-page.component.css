@@ -1,0 +1,267 @@
+.personal{
+  background: rgba(255, 255, 255, .5);
+  padding: 0px;
+  position:absolute;
+  top: 50%;
+  left: 50%;
+  width:70em;
+  height:100em;
+  margin-top: -13em; /*set to a negative number 1/2 of your height*/
+  margin-left: -35em; /*set to a negative number 1/2 of your width*/  
+  border-radius: 30px;
+}
+
+.masthead-brand{
+  letter-spacing: 3px;
+  font-stretch: extra-expanded;
+  font-size: large;
+  margin-right: 30px;
+  margin-bottom: 0px;
+  font-weight: lighter;
+  text-align: right;
+  padding-right: 4em;
+
+}
+
+
+
+
+.notification {
+  background-color: #555;
+  color: white;
+  text-decoration: none;
+  padding: 15px 26px;
+  position: relative;
+  display: inline-block;
+  border-radius: 2px;
+}
+
+.notification {
+  background-color: rgba(255, 255, 255, .5);
+  color: white;
+  text-decoration: none; 
+  padding: 10px ;
+  display: unset;
+}
+
+
+.img:hover {
+  -webkit-box-shadow: 0 0 5px pink;
+}
+
+.notification .badge {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  padding: 3px 5px;
+  border-radius: 50%;
+  background: red;
+  color: white;
+  text-align: right;
+  font-size: xx-small;
+
+}
+
+.frm{
+  background: rgba(227, 234, 243, 0.5);
+  padding: 0px;
+  position:absolute;
+  top: 22%;
+  left: 54.8%;
+  width:63em;
+  height:88em;
+  margin-top: -14em; /*set to a negative number 1/2 of your height*/
+  margin-left: -35em; /*set to a negative number 1/2 of your width*/  
+  border-radius: 30px;
+}
+
+
+.brands{
+  background: rgba(216, 224, 235, 0.5);
+  padding: 0px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  text-align: right;
+  direction: rtl;
+  width:59em;
+  margin-left: 2em; /*set to a negative number 1/2 of your width*/  
+  margin-top: 1em;
+
+}
+
+.split-para { display:block;margin:10px;}
+.split-para span { display:block;float:right;width:50%;margin-left:10px;}
+
+.btn:hover {
+font-weight: normal;
+text-decoration: none;
+}
+.btn:focus{
+text-decoration: none;
+color:  #1264bd;
+}
+
+
+.btn{
+  width:30%;
+  display: inline-block;
+  box-sizing: border-box;
+  margin-right: 20.5em;
+}
+
+.exit{
+display: inline-block;
+box-sizing: border-box;
+margin-right: 20.5em;
+font-size: large;
+font-weight: normal ;
+display:inline;
+color: red; 
+display: inline-block;
+box-sizing: border-box;
+margin-left: 3.7em;
+float: left;
+user-select: none;
+background-color: transparent;
+border: 1px solid transparent;
+padding: .375rem .75rem;
+font-size: 1.1rem;
+line-height: 1.5;
+border-radius: .25rem;
+transition: color .15s
+
+}
+
+.exit:hover {
+font-weight: normal;
+text-decoration: none;
+color: rgb(221, 10, 10);
+}
+.exit:focus{
+text-decoration: none;
+color: rgb(221, 10, 10);
+text-shadow: rgb(252, 88, 88);
+
+
+}
+
+
+.product {
+border: 2px solid #999;
+padding: 20px;
+display: inline-block;
+}
+
+.img {
+display: block;
+background-color: transparent;
+height: 20px;
+margin: 0 0 10px 0;
+position: relative;
+transition: transform 2s ease;
+animation-iteration-count: 0.2s;
+animation-duration: 0.5s;
+transform-origin: bottom;
+}
+
+.notification {background-color: transparent;}
+.bounce-2 {
+animation-name: bounce-2;
+animation-timing-function: ease;
+}
+
+
+
+@keyframes bounce-2 {
+0%   { transform: translateY(0); }
+50%  { transform: translateY(-4px); }
+100% { transform: translateY(1px); }
+}
+
+
+
+.main-hr {
+width: 30%;
+border: none;
+border-top: 1px solid #c3c3c3;
+}
+.icon-btn {
+width: 50px;
+height: 50px;
+border: 1px solid #cdcdcd;
+background: white;
+border-radius: 25px;
+overflow: hidden;
+position: relative;
+transition: width 0.2s ease-in-out;
+}
+.add-btn:hover {
+width: 140px;
+}
+.add-btn::before,
+.add-btn::after {
+transition: width 0.2s ease-in-out, border-radius 0.2s ease-in-out;
+content: "";
+position: absolute;
+height: 4px;
+width: 10px;
+top: calc(50% - 2px);
+background: #007bff;
+}
+.add-btn::after {
+right: 14px;
+overflow: hidden;
+border-top-right-radius: 2px;
+border-bottom-right-radius: 2px;
+}
+.add-btn::before {
+left: 14px;
+border-top-left-radius: 2px;
+border-bottom-left-radius: 2px;
+}
+.icon-btn:focus {
+outline: none;
+}
+.btn-txt {
+opacity: 0;
+transition: opacity 0.2s;
+}
+.add-btn:hover::before,
+.add-btn:hover::after {
+width: 2px;
+border-radius: 2px;
+}
+.add-btn:hover .btn-txt {
+opacity: 1;
+}
+.add-icon::after,
+.add-icon::before {
+transition: all 0.2s ease-in-out;
+content: "";
+position: absolute;
+height: 20px;
+width: 2px;
+top: calc(50% - 10px);
+background: #007bff;
+overflow: hidden;
+}
+.add-icon::before {
+left: 22px;
+border-top-left-radius: 2px;
+border-bottom-left-radius: 2px;
+}
+.add-icon::after {
+right: 22px;
+border-top-right-radius: 2px;
+border-bottom-right-radius: 2px;
+}
+.add-btn:hover .add-icon::before {
+left: 15px;
+height: 4px;
+top: calc(50% - 2px);
+}
+.add-btn:hover .add-icon::after {
+right: 15px;
+height: 4px;
+top: calc(50% - 2px);
+}

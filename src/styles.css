@@ -1,1 +1,110 @@
 /* You can add global styles to this file, and also import other style files */
+/* @import '~bootstrap/dist/css/bootstrap.min.css'; */
+@import "~bootstrap/dist/css/bootstrap.css";
+@import "~@ng-select/ng-select/themes/material.theme.css";
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+
+
+.nav-item {
+  margin-right: 100px;
+  margin-top: 15px;
+}
+
+
+
+  
+
+   body { 
+    /* position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1050;
+    */
+    background-color:transparent;
+    background:  url(assets/landingPage/5.jpg) no-repeat center center fixed;
+   
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; 
+
+   
+  
+}
+
+.panel-default {
+opacity: 0.9;
+margin-top:30px;
+}
+.form-group.last { margin-bottom:0px; } 
+    
+    
+
+html {
+  box-sizing: border-box;
+  height: 100%;
+  display: flex;
+}
+
+
+
+/* #bell {
+  display: block;
+  width: 10vmin;
+  min-width: 1rem;
+  height: auto;
+  animation: ring 1.5s infinite ease-in-out
+}
+
+#clapper-group {
+  transform-origin: top center;
+  animation: ring-clapper 1.5s infinite linear;
+}
+
+@keyframes ring {
+  0% { transform: rotate(-30deg) }
+  50% { transform: rotate(30deg) }
+  100% { transform: rotate(-30deg) }
+}
+
+@keyframes ring-clapper {
+  0% { transform: rotate(0deg) }
+  20% { transform: rotate(20deg) }
+  70% { transform: rotate(-20deg) }
+  100% { transform: rotate(0deg) }
+} */
+
+
+.img {
+  position:relative; /* To animate the `top` position */
+}
+
+.box {
+  width: 150px;
+  height: 150px;
+}
+
+.box:hover {
+  -webkit-transform: rotate(1turn);
+  border-radius: 20%;
+  margin-right: 0px;
+}
+
+.rotate {
+  -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+.rotate:hover {
+  -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+}
+
+

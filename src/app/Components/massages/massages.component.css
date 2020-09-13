@@ -1,0 +1,83 @@
+.personal{
+    background: rgba(255, 255, 255, .5);
+    padding: 0px;
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    width:70em;
+    height:170em;
+    margin-top: -13em; /*set to a negative number 1/2 of your height*/
+    margin-left: -35em; /*set to a negative number 1/2 of your width*/  
+    border-radius: 30px;
+}
+.frm{
+    background: rgba(227, 234, 243, 0.5);
+    padding: 0px;
+    position:absolute;
+    top: 12%;
+    left: 54.8%;
+    width:63em;
+    height:162em;
+    margin-top: -14em; /*set to a negative number 1/2 of your height*/
+    margin-left: -35em; /*set to a negative number 1/2 of your width*/  
+    border-radius: 30px;
+  }
+
+  
+.exit{
+    display: inline-block;
+    box-sizing: border-box;
+    margin-right: 20.5em;
+    font-size: large;
+    font-weight: normal ;
+    display:inline;
+    color: red; 
+    display: inline-block;
+    box-sizing: border-box;
+    margin-left: 3.7em;
+    float: left;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s
+  
+  }
+  
+  .exit:hover {
+    font-weight: normal;
+    text-decoration: none;
+    color: rgb(221, 10, 10);
+  }
+  .exit:focus{
+    text-decoration: none;
+    color: rgb(221, 10, 10);
+    text-shadow: rgb(252, 88, 88);
+  
+  
+  }
+  
+.masthead-brand{
+    letter-spacing: 3px;
+    font-stretch: extra-expanded;
+    font-size: large;
+    margin-right: 30px;
+    margin-bottom: 0px;
+    font-weight: lighter;
+    text-align: right;
+    padding-right: 4em;
+
+}
+
+.sale{
+  background: rgba(200, 219, 245, 0.5);
+  padding: 0px;
+ height: 400px;;
+  width:60em;
+  border-radius: 30px;
+  margin-bottom: 1em;
+
+}

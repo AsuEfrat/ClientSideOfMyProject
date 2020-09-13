@@ -1,17 +1,80 @@
-<div style="text-align:center" dir="rtl">
-  <h1> מילוי פרטי לקוח:</h1>
+<div class="personal">
+  <div style="text-align:center" dir="rtl">
+    <h1 style=" padding-right: 3em; letter-spacing: 0px; font-size: xx-large; margin-right: 50px; margin-bottom:0em;float:inline-start; font-weight: normal ;display: block; text-align: right; margin-top: 30px;" class="masthead-brand" >שלום<a style="margin-top: 30px; font-weight: normal; font-size:xx-large;  margin-right: 10px;  color: #007bff; text-align: right;">לך</a>  </h1>
+    <h1 style="font-size:large;" class="masthead-brand" >תודה שבחרת בנו</h1>
 </div>
-<form (submit)="register()" dir="rtl">
-    <div> <label> שם פרטי: </label><input name="FirstName"  [(ngModel)]="customerDetails.firstName">  </div>
-    <div> <label> שם משפחה: </label><input name="LastName"  [(ngModel)]="customerDetails.lastName">  </div>
-    <div> <label>תעודת זהות: </label><input name="Id"  [(ngModel)]="customerDetails.id">  </div>
-    <div> <label> פלאפון: </label><input name="PhoneNumber"  [(ngModel)]="customerDetails.phoneNumber">  </div>
-    <div> <label>תאריך לידה:</label><input name="BirthDate"  [(ngModel)]="customerDetails.birthDate">  </div>
-    <div> <label>תאריך הצטרפות לאתר: </label><input name="JoinDate"  [(ngModel)]="customerDetails.JoinTheWebDate">  </div>
-    <div> <label>שם משתמש:</label><input name="UserName" [(ngModel)]="customer.UserName">  </div>
-    <div><label>סיסמה:</label> <input name="Password" [(ngModel)]="customer.Password" >   </div>
-    <div><label>E-mail:</label><input name="Email" [(ngModel)]="customer.Email" type="email">   </div>
-    <input type="submit" value="register">
  
+<form (submit)="register()" class="frm" [formGroup]="messageForm" dir="rtl" style="text-align:center">
+  <div style="margin-top: 4em;">
+    <div class="a">
+    <div><label>שם פרטי</label> <input type="FirstName" dir="rtl" name="FirstName" formControlName="name" id="inputEmail" class="form-control" placeholder="שם פרטי" required="" autofocus="" style="width:37%; display: inline-block;" [(ngModel)]="customerDetails.firstName">
+      <div *ngIf="messageForm.controls.name.errors" class="error">
+        <div *ngIf="messageForm.controls.name.errors.pattern">שם מורכב רק מאותיות</div>
+        <div *ngIf="messageForm.controls.name.errors.required"><i style="margin-right: 20px;" class="fa fa-exclamation-circle"></i>  שדה חובה</div>
+      </div>
+      </div>
+    <div><label>שם משפחה</label><input type="LastName" dir="rtl" name="LastName" formControlName="name" id="inputEmail" class="form-control" placeholder="שם משפחה" required="" autofocus="" style="width:37%; display: inline-block;" [(ngModel)]="customerDetails.lastName">
+      <div *ngIf="messageForm.controls.lastName.errors" class="error">
+        <div *ngIf="messageForm.controls.lastName.errors.pattern">שם מורכב רק מאותיות</div>
+      </div>
+      </div>
+    <div> <label>תעודת זהות</label><input type="Id" dir="rtl" name="Id"  formControlName="id" class="form-control" placeholder="תעודת זהות" required="" autofocus="" style="width:37%; display: inline-block;" [(ngModel)]="customerDetails.id">
+      <div *ngIf="messageForm.controls.id.errors" class="error">
+        <div *ngIf="messageForm.controls.id.errors.pattern">ת.ז. חייבת להכיל 9 ספרות</div>
+        <div *ngIf="messageForm.controls.id.errors.required"><i style="margin-right: 20px;" class="fa fa-exclamation-circle"></i>  שדה חובה</div>
+      </div>
+      </div>
+    <div><label>פלאפון</label> <input type="text" dir="rtl" name="PhoneNumber" formControlName="phone" id="inputEmail" class="form-control" placeholder="מספר פלאפון" required="" autofocus="" style="width:37%; display: inline-block;" [(ngModel)]="customerDetails.phoneNumber"> 
+       <div *ngIf="messageForm.controls.phone.errors" class="error">
+        <div *ngIf="messageForm.controls.phone.errors.pattern">טלפון חייב להכיל 10 ספרות</div>
+        <div *ngIf="messageForm.controls.phone.errors.required"><i style="margin-right: 20px;" class="fa fa-exclamation-circle"></i>  שדה חובה</div>
+      </div>
+      </div> 
 
+    
+    <div><label>תאריך לידה</label> <input type="date" dir="rtl" name="BirthDate"  formControlName="joinDate"   class="form-control" placeholder="תאריך לידה" required="" autofocus="" style="width:48%; display: inline-block;" [(ngModel)]="customerDetails.birthDate">
+      <div *ngIf="messageForm.controls.joinDate.errors" class="error">
+        <div *ngIf="messageForm.controls.joinDate.errors.pattern">יש בעיה עם התאריך שהכנסת</div>
+        <div *ngIf="messageForm.controls.joinDate.errors.required"><i style="margin-right: 20px;" class="fa fa-exclamation-circle"></i>  שדה חובה</div>
+    </div>
+  </div>
+    </div>
+    <div class="b"> 
+    <div><label>תאריך הצטרפות</label> <input type="date" dir="rtl" name="JoinDate2" formControlName="joinDate2"  class="form-control" placeholder="תאריך הצטרפות" required="" autofocus="" style="width:47%; display: inline-block;" [(ngModel)]="customerDetails.JoinDate">
+      <div *ngIf="messageForm.controls.joinDate2.errors" class="error">
+        <div *ngIf="messageForm.controls.joinDate2.errors.pattern">יש בעיה עם התאריך שהכנסת</div>
+        <div *ngIf="messageForm.controls.joinDate2.errors.required"><i style="margin-right: 20px;" class="fa fa-exclamation-circle"></i>  שדה חובה</div>
+      </div>
+      </div>
+     
+    
+      <div> <label>שם משתמש</label><input type="userName" dir="rtl" name="UserName" formControlName="UserName"  class="form-control" placeholder="שם משתמש" required="" autofocus="" style="width:37%; display: inline-block;" [(ngModel)]="customer.UserName">
+      <div *ngIf="messageForm.controls.UserName.errors" class="error">
+        <div *ngIf="messageForm.controls.UserName.errors.pattern">שם מורכב רק מאותיות</div>
+        <div *ngIf="messageForm.controls.UserName.errors.required"><i style="margin-right: 20px;" class="fa fa-exclamation-circle"></i>  שדה חובה</div>
+      </div>
+      </div>
+    
+    <div><label>סיסמה</label> <input type="Password" dir="rtl" name="Password" formControlName="password" class="form-control" placeholder="סיסמה" required="" autofocus="" style="width:37%; display: inline-block;" [(ngModel)]="customer.Password"> 
+      <div *ngIf="messageForm.controls.password.errors" class="error">
+        <div *ngIf="messageForm.controls.password.errors.pattern">סיסמה חייבת להיות מורכבת מ6 עד 15 תוים</div>
+        <div *ngIf="messageForm.controls.password.errors.required"><i style="margin-right: 20px;" class="fa fa-exclamation-circle"></i>  שדה חובה</div>
+    </div>
+    </div>
+    <div> <label>Email</label><input type="Email" dir="rtl" name="Email" formControlName="email" id="inputEmail" class="form-control" placeholder="Email" required="" autofocus="" style="width:37%; display: inline-block;" [(ngModel)]="customer.Email"> 
+      <div *ngIf="messageForm.controls.email.errors" class="error">
+        <div *ngIf="messageForm.controls.email.errors.pattern">יש בעיה עם המייל שהכנסת </div>
+        <div *ngIf="messageForm.controls.email.errors.required"><i style="margin-right: 20px;" class="fa fa-exclamation-circle"></i>  שדה חובה</div>
+      </div>
+      </div>
+    </div>
+     </div> 
+    <br/>
+    <br/>
+   <div>    
+    <input class="btn btn-lg btn-primary"  type="submit" value="הצטרף">
+  </div>
+    
 </form>
+</div>
+

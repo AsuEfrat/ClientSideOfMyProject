@@ -1,12 +1,11 @@
 export class BusinessOwner{
     BusinessCode:number;
-    CustomerCode:number;
+    customerCode:number;
     PersonalEmail:string;
-
-    constructor()
-    {
-
-    }
+    CardTypeCode:number;
+constructor()
+{
     
-
+}
+   
 }

@@ -1,8 +1,78 @@
+
+
+<div class="personal">
 <h1 style="text-align:center" dir="rtl">מילוי פרטי בעל עסק</h1>
-<form (submit)="register()" dir=rtl>
-<div><label>שם משתמש</label><input name="UserName"  [(ngModel)]="customer.UserName"></div>
-<div><label>סיסמה</label><input name="Password" [(ngModel)]="customer.Password"></div>
-<div><label>Email</label><input name="Email" [(ngModel)]="customer.Email"></div>
-<div><label> Email אישי</label><input name="PersonalEmail" [(ngModel)]="businessOwner.PersonalEmail"></div>
-<input type="submit" value="register">
+
+<form (submit)="register(logoInput)" [formGroup]="messageForm" dir=rtl  style="text-align:center">
+<div class="a">
+<div><label>שם משתמש</label><input name="UserName"   class="form-control" formControlName="name"  placeholder=" שם משתמש " required="" autofocus="" style="width:37%; display: inline-block;" [(ngModel)]="customer.UserName">
+    <div *ngIf="messageForm.controls.name.errors" class="error">
+        <div *ngIf="messageForm.controls.name.errors.pattern"> יש בעיה עם השם שהכנסת </div>
+        <div *ngIf="messageForm.controls.name.errors.required"><i style="margin-right: 20px;" class="fa fa-exclamation-circle"></i>  שדה חובה</div>
+    </div>
+</div>
+<div><label>סיסמה</label><input name="Password"  class="form-control"  formControlName="password"  placeholder="סיסמה " required="" autofocus="" style="width:37%; display: inline-block;" [(ngModel)]="customer.Password">
+    <div *ngIf="messageForm.controls.password.errors" class="error">
+        <div *ngIf="messageForm.controls.password.errors.pattern">סיסמה חייבת להיות מורכבת מ6 עד 15 תוים</div>
+        <div *ngIf="messageForm.controls.password.errors.required"><i style="margin-right: 20px;" class="fa fa-exclamation-circle"></i>  שדה חובה</div>
+    </div>
+</div>
+<div><label>Email</label><input name="Email"   class="form-control" placeholder="Email "  formControlName="email" required="" autofocus="" style="width:37%; display: inline-block;" [(ngModel)]="customer.Email">
+    <div *ngIf="messageForm.controls.email.errors" class="error">
+        <div *ngIf="messageForm.controls.email.errors.pattern">יש בעיה עם המייל שהכנסת</div>
+        <div *ngIf="messageForm.controls.email.errors.required"><i style="margin-right: 20px;" class="fa fa-exclamation-circle"></i>  שדה חובה</div>
+</div>
+</div>
+<div><label> Email אישי</label><input name="PersonalEmail"  class="form-control" placeholder="Personal Email"  formControlName="PersonalEmail" required="" autofocus="" style="width:37%; display: inline-block;" [(ngModel)]="businessOwner.PersonalEmail">
+    <div *ngIf="messageForm.controls.PersonalEmail.errors" class="error">
+    <div *ngIf="messageForm.controls.PersonalEmail.errors.pattern">יש בעיה עם המייל שהכנסת</div>
+    <div *ngIf="messageForm.controls.PersonalEmail.errors.required"><i style="margin-right: 20px;" class="fa fa-exclamation-circle"></i>  שדה חובה</div>
+</div>
+</div>
+</div>
+<div style="margin-top: 4em;">
+<div><label> שם סוג הכרטיס</label><input name="cardName"  class="form-control" formControlName="cardName"  placeholder=" שם סוג כרטיס" required="" autofocus="" style="width:30%; display: inline-block;" [(ngModel)]="cardType.TypeName">
+    <div *ngIf="messageForm.controls.cardName.errors" class="error">
+        <div *ngIf="messageForm.controls.cardName.errors.pattern">הקש שם כרטיס</div>
+        <div *ngIf="messageForm.controls.cardName.errors.required"><i style="margin-right: 20px;" class="fa fa-exclamation-circle"></i>  שדה חובה</div>
+    </div>
+</div>
+
+
+<div><label> תוקף כרטיס</label><input name="ValidFor"  class="form-control"  formControlName="valid"  placeholder="תוקף כרטיס " required="" autofocus="" style="width:30%; display: inline-block;"  [(ngModel)]="cardType.ValidFor">
+    <div *ngIf="messageForm.controls.valid.errors" class="error">
+        <div *ngIf="messageForm.controls.valid.errors.pattern"> הקש תוקף במספר חודשים</div>
+        <div *ngIf="messageForm.controls.valid.errors.required"><i style="margin-right: 20px;" class="fa fa-exclamation-circle"></i>  שדה חובה</div>
+    </div>
+</div> 
+<div><label> תמונה</label><input  type="file" #logoInput name="Logo" ></div> 
+</div>
+
+<div style="margin-top: 7em;"><label dir="rtl">אם אתם מעוניינים במספר חנויות לחצו על DreamCard לאחר ההצטרפות   </label></div>
+
+<div class="b">
+<div><label>שם חנות</label><input  name="storeName"  class="form-control" formControlName="storeName"  placeholder="שם חנות " required="" autofocus="" style="width:30%; display: inline-block;" #chainName [(ngModel)]="chain.ChainName">
+    <div *ngIf="messageForm.controls.storeName.errors" class="error">
+        <div *ngIf="messageForm.controls.storeName.errors.pattern">שם מורכב רק מאותיות</div>
+        <div *ngIf="messageForm.controls.storeName.errors.required"><i style="margin-right: 20px;" class="fa fa-exclamation-circle"></i>  שדה חובה</div>
+      </div>
+</div> 
+<div><label>שם אתר חנות</label><input  name="ChainWebsite"  class="form-control" formControlName="webName"   placeholder="שם אתר חנות " required="" autofocus="" style="width:30%; display: inline-block;" [(ngModel)]="chain.ChainWebsite">
+    <div *ngIf="messageForm.controls.webName.errors" class="error">
+        <div *ngIf="messageForm.controls.webName.errors.pattern">יש בעיה עם הכתובת שהכנסת</div>
+        <div *ngIf="messageForm.controls.webName.errors.required"><i style="margin-right: 20px;" class="fa fa-exclamation-circle"></i>  שדה חובה</div>
+      </div>
+</div>
+<div><label> טלפון</label><input type="text" name="PhoneNumber"  class="form-control" formControlName="phone"  placeholder="טלפון " required="" autofocus="" style="width:30%; display: inline-block;" [(ngModel)]="chain.PhoneNumber">
+    <div *ngIf="messageForm.controls.phone.errors" class="error">
+        <div *ngIf="messageForm.controls.phone.errors.pattern">טלפון חייב להכיל 10 ספרות</div>
+        <div *ngIf="messageForm.controls.phone.errors.required"><i style="margin-right: 20px;" class="fa fa-exclamation-circle"></i>  שדה חובה</div>
+      </div>
+</div> 
+
+<input type="submit"  class="btn btn-lg btn-primary" style="size: 40%; width:14%;margin-right: 7em;display: inline-block; margin-left: 3em;" value="הצטרף" >
+<button  class="btn btn-lg btn-primary" routerLink="/addChainsToDreamCards/{{businessOwner.CardTypeCode}}">DREAM CARD</button>
+</div>
 </form>
+
+ 

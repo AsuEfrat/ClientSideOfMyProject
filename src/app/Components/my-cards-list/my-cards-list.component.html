@@ -1,0 +1,16 @@
+<p>my-cards-list works!</p>
+
+<div *ngFor="let item of AllClubCardsNames" (click)="mycardsdetails(item)" #ChainName><button>{{item}}</button></div> 
+<!-- <button (click)="findTheClubCard()" >{{clubcard[0].CCode}} </button>
+<button >{{clubcard[1].CCode}}</button> -->
+<hr/>
+<div><button (click)="next()">להוספת מועדונים  </button></div> 
+<!-- routerLink="/allclubcards/{{cusdetailscode}}" -->
+
+<br><br><br>
+
+
+<!-- <div style="text-align:left;">
+   <button   (click)="backToLastPage()"> <img src="https://img.icons8.com/nolan/64/circled-left-2.png" width="50px" height="50px"  ></button>
+  </div>
+<div><button  style="margin-left: 20;" routerLink="">חזור לדף הבית</button></div> -->

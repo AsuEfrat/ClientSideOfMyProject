@@ -1,0 +1,181 @@
+.signIn{
+  background: rgba(255, 255, 255, .5);
+  padding: 0px;
+  position:absolute;
+  top: 50%;
+  left: 65%;
+  width:24em;
+  height:30em;
+  margin-top: -14em; /*set to a negative number 1/2 of your height*/
+  margin-left:-40em; /*set to a negative number 1/2 of your width*/  
+  border-radius: 30px;
+}
+.floatleft {
+  float: inline-end;
+  margin: 2%;
+}
+.floatright {
+  float: right;
+  margin: 2%;
+}
+.business-manager{
+  background-image:   url(../../../assets/user/mantie.png);
+  float: inline-end;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  size: 10px;
+  background-color: Transparent;
+  background-repeat:no-repeat;
+  border: none;
+  cursor:pointer;
+  overflow: none;
+  outline:none;
+  width: 100px;
+  height: 100px;
+  border-radius:30%;
+  margin-top: 10px;
+  margin-left: 25px;
+  }
+.user{
+  background-image: url(../../../assets/user/man.png);
+  float: inline-end;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  size: 10px;
+  background-color: Transparent;
+  background-repeat:no-repeat;
+  border: none;
+  cursor:pointer;
+  overflow: none;
+  outline-style: none;
+  width: 100px;
+  height: 100px;
+  border-radius:40%;
+  margin-top: 10px;
+  margin-right: 25px;
+ }
+ .user:focus {  -webkit-box-shadow: 0 0 5px dodgerblue; }
+ .business-manager:focus {  -webkit-box-shadow: 0 0 5px dodgerblue; }
+
+.user:hover
+{
+-webkit-box-shadow: 0 0 5px dodgerblue;
+}
+.business-manager:hover
+{
+-webkit-box-shadow: 0 0 5px dodgerblue;
+}
+.form-control{
+  margin-left: 0px;
+  margin-right: 40px;
+
+}
+
+
+.btns:hover {
+  font-weight: bolder;
+}
+
+  /* .avatar {
+  vertical-align: text-top;
+  width: 80px;
+  height: 80px;
+  border-radius:20%
+  } */
+
+.btns{
+  background-color: Transparent;
+  background-repeat:no-repeat;
+  border: none;
+  cursor:pointer;
+  overflow: hidden;
+  outline:none;
+
+  }
+
+.form-control{
+  direction: rtl;
+}
+
+.btn{
+  width:30%;
+  display: inline-block;
+  box-sizing: border-box;
+}
+
+
+
+.box {
+margin:  auto;
+
+}
+
+.box:hover {
+-webkit-transform: rotate(360deg);
+
+}
+
+
+.rotate {
+-webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.rotate:hover {
+-webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
+
+
+.btn:hover {
+-webkit-transform: translateY(-3px);
+}
+
+
+/* Global */
+html{
+min-height: 100%;
+overflow: hidden;
+}
+body{
+height: calc(100vh - 8em);
+padding: 4em;
+color: rgba(255,255,255,.75);
+font-family: 'Anonymous Pro', monospace;  
+background-color: rgb(25,25,25);  
+}
+.line-1{
+  position: relative;
+ 
+  width: 24em;
+  margin: 0 auto;
+  border-left: 2px solid rgba(255,255,255,.75);
+  font-size: 180%;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  transform: translateY(-50%);    
+}
+
+/* Animation */
+.anim-typewriter{
+animation: typewriter 2s steps(44) 1s 1 normal both,
+           blinkTextCursor 500ms steps(44) infinite normal;
+}
+@keyframes typewriter{
+from{width: 0;}
+to{width: 11.5em;}
+}
+@keyframes blinkTextCursor{
+from{border-left-color: rgba(212, 207, 207, 0.794);}
+to{border-left-color: transparent;}
+}
+
+
+
+

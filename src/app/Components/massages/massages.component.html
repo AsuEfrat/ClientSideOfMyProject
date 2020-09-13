@@ -1,0 +1,31 @@
+<div dir="rtl"    class="personal" >
+  <h1 style=" padding-right: 3em; letter-spacing: 0px; font-size: x-large; margin-right: 50px; margin-bottom:0em;float:inline-start; font-weight: normal ;display: block; text-align: right; margin-top: 30px;" class="masthead-brand" >שלום<a style="margin-top: 30px; font-weight: normal; font-size: x-large;  margin-right: 10px;  color: #007bff; text-align: right;">{{FirstName}}</a>  <button   class="exit"  type="btn">יציאה</button></h1>
+    <h1 class="masthead-brand" >הארנק שלך</h1>  
+  <div class="frm">
+
+<!-- <div style="margin-right: 30px;text-align: right;"  *ngFor="let c of CustomerSpecialSales" ><br/><p>יש באפשרותך לקבל מוצר זה מבלי להוציא כסף מהכיס!</p><br/><p width="20px">{{c.allSpecialSales[0].Description}}</p><img  src="{{c.allSpecialSales[0].Image}}" style="width: 300px; height:200px;" >{{c.ChainName}}</div>
+<hr/>
+<div *ngFor="let v of validationCards"><p dir="rtl" style="text-align: right;"> נא חדשו את התוקף!בעוד חודש יפוג התוקף של כרטיס {{v}} </p></div>
+<br><br><br>
+
+
+</div>
+</div> -->
+
+
+
+       <h1 style="padding-right: 0px; letter-spacing: 0px; font-size: x-large; margin-bottom:2em;float:inline-start; font-weight: normal ;display: block; text-align: center; margin-top: 30px;" class="masthead-brand" >הודעות חשובות במיוחד<a style="margin-top: 30px; font-weight: normal; font-size: x-large;  margin-right: 10px;  color: #007bff; text-align: center;">בשבילך</a>  </h1>
+<div  class="sale" style="margin-right: 30px;"  *ngFor="let c of CustomerSpecialSales" >
+  <p style="color: #007bff; margin-right: 6em; text-align: center; font-size: large; width: 80%; margin-top: 2px;" *ngIf="c.allSpecialSales[0].SalePrice!=null">  יש באפשרותך לקבל מוצר זה מבלי להוציא כסף מהכיס!</p>
+  <div style="margin-top: 2em; margin-right: 2em;">
+  <p style=" text-align: right; font-size: medium; width: 80%;" width="20px"> פרטי המבצע: {{c.allSpecialSales[0].Description}}</p>
+  
+  <img  style="float: left; margin-left: 4em; margin-bottom:4em; height:200px;"   src="{{c.allSpecialSales[0].Image}}"  >
+  <p  style="text-align: right;font-size: small; font-weight: normal;"> *ניתן להשיג בכל החנויות ברשת {{c.ChainName}}</p></div>
+  </div>
+  <div *ngFor="let v of validationCards" style="padding-bottom: 1em;background: rgba(200, 219, 245, 0.5);padding: 0px;width:60em;border-radius: 15px; margin-right: 2em;text-align: right; color: #007bff;  height: 40px; "><p style="margin-right: 1em;padding-top: 0.5em;" dir="rtl" >   נא חדשו את התוקף ! בעוד חודש יפוג התוקף של כרטיס {{v}} </p></div>
+
+
+</div>
+</div>
+ 

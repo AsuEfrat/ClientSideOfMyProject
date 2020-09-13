@@ -1,13 +1,25 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<!--div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<div dir="rtl">
-  -->
-  <app-welcome ></app-welcome>
-  <!-- <button routerLink="addcustomer">add</button> -->
+
+<div dir="rtl" style="padding: 0px;margin-right: 11.9em;">
+  <ul class="nav justify-content-center">
+    <li class="nav-item" style="margin-right: 0px;">
+      <a class="nav-link active" routerLink="/welcome">בית</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/userPersonalHomePage">חשבון אישי</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/aboutUs">עלינו</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/contactUs">צור קשר</a>
+    </li>
+    <a routerLink="/welcome"> <img src="url(../../../assets/img/logo.png" class="img"  class="box rotate" style=" float: left; width: 7em; height:7em;margin-right: 12em; "> </a>
+  </ul>
+  </div>
+  
   <router-outlet></router-outlet>
-   
+  <ngx-scrolltop
+
+  theme="blue"
+>
+</ngx-scrolltop>

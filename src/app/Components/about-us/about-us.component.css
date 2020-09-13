@@ -1,0 +1,38 @@
+@import url(https://fonts.googleapis.com/css?family=Signika+Negative:400,700);
+
+
+.personal{
+  background: rgba(255, 255, 255, .5);
+  padding: 0px;
+  position:absolute;
+  top: 50%;
+  left: 50%;
+  width:70em;
+  height:50em;
+  margin-top: -13em; /*set to a negative number 1/2 of your height*/
+  margin-left: -35em; /*set to a negative number 1/2 of your width*/  
+  border-radius: 30px;
+  
+}
+
+.txt{
+  padding: 0px;
+    position:absolute;
+    top: 46%;
+    right: 8%;
+    text-align: center;
+    width:60em;
+    height:45em;
+    margin-top: -14em; /*set to a negative number 1/2 of your height*/
+    border-radius: 30px;
+    direction: rtl;
+    font-family: unset;
+    font-size: medium;
+    color: black;
+}
+
+.t{
+    margin-top: 1.5em;
+    text-align: center;
+    color: black;
+}

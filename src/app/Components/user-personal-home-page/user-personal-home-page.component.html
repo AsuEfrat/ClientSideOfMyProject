@@ -1,0 +1,37 @@
+<body dir=ltr >
+    <div class="personal" >
+            <h1 style=" padding-right: 3em; letter-spacing: 0px; font-size: x-large; margin-right: 50px; margin-bottom:0em;float:inline-start; font-weight: normal ;display: block; text-align: right; margin-top: 30px;" class="masthead-brand" >שלום<a style="margin-top: 30px; font-weight: normal; font-size: x-large;  margin-right: 10px;  color: #007bff; text-align: right;">{{user.FirstName}}</a>  <button   class="exit"  type="btn">יציאה</button></h1>
+            <h1 class="masthead-brand" >הארנק שלך</h1>
+          
+     <a  *ngIf="SpecialSalesNumber>0" (click)="massages()" class="stage" style="float:left; margin-left: 4.8em;  align-items: center;width: 40px; height:30px; padding: 0px; color: transparent;" href="#" class="notification">
+            <img src="url(../../../assets/img/3.png" class="img bounce-2"    style=" width: 40px; height:30px; ">
+            <span class="badge">{{SpecialSalesNumber}}</span>
+          </a> 
+          <a><button (click)="doch()" class="btn btn-info" style="margin-right: 0%; width: 13%; margin-left: 2em; ">צפה בדו"ח חודשי</button> </a>
+                  <!-- <span class="cart-count">1</span> -->
+    
+          
+    
+        <form action="" class="frm">
+    
+            
+            
+            <p style="margin-top: 4em; margin-bottom: 2em;" class="split-para" class="brands"><span style="margin-right: 8em; color: #007bff; font-weight: normal; font-size: large;">שם</span> <span style=" float: left; margin-left: 8em; color: #007bff; font-weight: normal; font-size: large;">מצב נוכחי</span></p>
+    
+            <div  *ngFor="let c of validcard" (click)="mycardsdetails(c.chainName)" >
+                    <p class="brands"><span style="margin-right: 9em; cursor: pointer;">{{c.chainName}}</span>   <span style=" float: left; margin-left: 10.8em; color:lime;" *ngIf="c.zamin==true">תקף</span> <span style=" float: left; margin-left: 10em;" *ngIf="c.zamin==false">לא תקף</span> </p>
+            </div>
+            <p class="brands" style="text-align: center; background-color: transparent;">
+                <button style="text-align: center;" type="button" class="icon-btn add-btn">
+                <div class="add-icon"></div>
+                <a  class="btn-txt" routerLink="/allclubcards">הוסף מועדון</a>
+                </button>
+            </p>    
+            
+        </form>
+    
+    </div>
+    
+    </body>  
+    
+    

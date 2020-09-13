@@ -1,7 +1,7 @@
 export class Customer{
      CustomerCode:number;             
      UserName :string;
-     Password:number;
+     Password:string;
      Email:string;
      
   constructor()

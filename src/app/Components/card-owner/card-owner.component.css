@@ -1,0 +1,103 @@
+.personal{
+  background: rgba(255, 255, 255, .5);
+  padding: 0px;
+  position:absolute; 
+  top: 50%;
+  left: 50%;
+  width:70em;
+  height:31em;
+  margin-top: -13em; /*set to a negative number 1/2 of your height*/
+  margin-left: -35em; /*set to a negative number 1/2 of your width*/  
+  border-radius: 30px;
+}
+
+.frm{
+  background: rgba(227, 234, 243, 0.5);
+  padding: 0px;
+  position:absolute;
+  top: 67%;
+  left: 54.8%;
+  width:62em;
+  height:24em;
+  margin-top: -14em; /*set to a negative number 1/2 of your height*/
+  margin-left: -35em; /*set to a negative number 1/2 of your width*/  
+  border-radius: 30px;
+}
+
+.exit{
+  display: inline-block;
+  box-sizing: border-box;
+  margin-right: 20.5em;
+  font-size: large;
+  font-weight: normal ;
+  display:inline;
+  color: red; 
+  display: inline-block;
+  box-sizing: border-box;
+  margin-left: 3.7em;
+  float: left;
+  user-select: none;
+  background-color: transparent;
+  border: 1px solid transparent;
+  padding: .375rem .75rem;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  border-radius: .25rem;
+  transition: color .15s
+
+}
+
+.button {
+  border-radius: 6px;
+  background: linear-gradient(40deg, #45cafc, #303f9f) !important;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding-bottom: 15px;
+  padding-top: 12px;
+  padding-left: 4px;
+  padding-right: 4px;
+  width: 220px;
+  transition: all 0.5s;
+  cursor: pointer;
+  
+}
+
+.button span {
+cursor: pointer;
+display: inline-block;
+position: relative;
+transition: 0.5s;
+}
+
+.button span:after {
+content: '\00ab';
+position: absolute;
+opacity: 0;
+top: 0;
+left: -20px;
+transition: 0.5s;
+}
+
+.button:hover span {
+padding-left: 25px;
+}
+
+.button:hover span:after {
+opacity: 1;
+left:  0;
+}
+
+
+.masthead-brand{
+letter-spacing: 3px;
+font-stretch: extra-expanded;
+font-size: large;
+margin-right: 30px;
+margin-bottom: 0px;
+font-weight: lighter;
+text-align: right;
+padding-right: 4em;
+
+}

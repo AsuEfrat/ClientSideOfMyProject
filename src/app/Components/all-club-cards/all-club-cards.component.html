@@ -1,0 +1,44 @@
+<head> </head>
+    <body id="i" dir=ltr>
+      <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+
+     
+      
+  
+      <div class="personal" >
+   
+        <h1 style=" padding-right: 3em; letter-spacing: 0px; font-size: x-large; margin-right: 50px; margin-bottom:0em;float:inline-start; font-weight: normal ;display: block; text-align: right; margin-top: 30px;" class="masthead-brand" >שלום<a style="margin-top: 30px; font-weight: normal; font-size: x-large;  margin-right: 10px;  color: #007bff; text-align: right;">{{customerName}}</a>  <button   class="exit"  type="btn">יציאה</button></h1>
+        <h1 class="masthead-brand" >הארנק שלך</h1>
+      
+
+
+    <form action="" class="frm" >
+      <p  class="title" style=" margin-top: 30px; text-align: center;">  <a style="margin-top: 30px; font-weight: normal; font-size: larger;  color: #0573e9; text-align: center; margin-right: 0em;" >המועדונים שלנו</a> <button class="add"   type="btn" *ngIf="selectedClubCards!=0"> הוסף </button> <button class="dis-add" disabled style="color: rgb(139, 137, 137); font-weight: normal; "  type="btn" *ngIf="selectedClubCards==0"> הוסף </button> <button  class="finish"  type="btn"  (click)=" addClubsToCustomer()">סיום</button> </p>
+<div class="move">
+      <p class="dv" *ngFor="let c of allClubCards" >
+        <label class="fancy-checkbox-label" >
+          <input type="checkbox" (click)="addToList(c)">
+          <span class="fancy-checkbox fancy-checkbox-img" ></span>
+          <img  class="brands" (click)="addToList(c)"  src="{{c.logo}}"  >
+          <p (click)="addToList(c)"  class="bn">{{c.TypeName}}</p>
+        </label>
+      </p>
+
+</div>        
+
+    </form>
+
+</div>
+
+
+    </body>
+
+
+
+
+     <!-- <p style="text-align: center; margin-top: 30px;"><a style="margin-top: 30px; font-weight: normal; font-size: larger;  color: #0573e9; text-align: center;">המועדונים שלנו</a>  </p>
+      <div class="dv" *ngFor="let c of allClubCards" >
+       <img tabindex="3" class="brands" src="{{c.logo}}"  (click)="addToList(c)" >
+       <p class="bn">{{c.TypeName}}</p>
+      </div> -->
+     

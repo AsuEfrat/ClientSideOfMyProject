@@ -1,0 +1,73 @@
+
+
+.error{
+    
+    margin-top: -20px;
+    color: red;
+    /* padding: .5em; */
+    display: inline-block;
+    font-size: .7em;
+    margin-bottom: 20px;
+
+}
+
+.personal{
+    background: rgba(255, 255, 255, .5);
+    padding: 0px;
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    width:70em;
+    height:50em;
+    margin-top: -13em; /*set to a negative number 1/2 of your height*/
+    margin-left: -35em; /*set to a negative number 1/2 of your width*/  
+    border-radius: 30px;
+}
+
+
+.frm{
+    background: rgba(227, 234, 243, 0.5);
+    padding: 0px;
+    position:absolute;
+    top: 40%;
+    left: 54.8%;
+    width:63em;
+    height:38em;
+    margin-top: -14em; /*set to a negative number 1/2 of your height*/
+    margin-left: -35em; /*set to a negative number 1/2 of your width*/  
+    border-radius: 30px;
+  }
+
+  
+.masthead-brand{
+    letter-spacing: 3px;
+    font-stretch: extra-expanded;
+    font-size: large;
+    margin-right: 30px;
+    margin-bottom: 0px;
+    font-weight: lighter;
+    text-align: right;
+    padding-right: 4em;
+
+}
+
+.a{
+    margin-right:4em;
+    float: right;
+    margin-top: 2em;
+}
+
+.b{
+    margin-top: 3em;
+    margin-left: 8em;
+    text-align: center;
+}
+.btn{
+    height: 5%;
+    
+    
+    box-sizing: border-box;
+    margin-top: 1.5em;
+    
+
+}

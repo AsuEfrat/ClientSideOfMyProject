@@ -1,9 +1,52 @@
-<div style="text-align:center">
-    <h1> Welcome to DreamCards!</h1>
- </div>
- <form dir=rtl>
-  <div> <label>שם משתמש</label><input name="UserName" >  </div>
-  <div><label>סיסמה</label><input name="Password" >   </div>
-  <div><button>המשך</button></div>
-</form>
-  <div dir=rtl><button routerLink="customerbusinessmanager">צור חשבון חדש</button> </div>
+
+
+ 
+
+
+      <div style=" margin-top: 5em; margin-right: 5em;" class="line-1 anim-typewriter">     <h1 style="font-size: xx-large; margin-bottom:0em;font-weight: normal; float: right;" class="masthead-brand"  >הארנק האלקטרוני <a style="font-weight: normal; color: dodgerblue;">שלך</a></h1>
+     </div>
+     
+      <form dir=rtl style="text-align: center;" class="signIn" (submit)="register()" >
+      <br/>
+         <h1 style="font-size: medium; margin-bottom:0em;font-weight: lighter;" class="masthead-brand" >עדיין אין לך <a style="font-weight: normal; color: dodgerblue;">חשבון</a>?</h1>
+         <h1 style="font-size: medium; margin-bottom: 0px;font-weight: lighter;" class="masthead-brand" >הרשמה קלה</h1>
+         <h1 style="font-size: medium; margin-bottom: 0px;font-weight: lighter;" class="masthead-brand" >מי <a style="font-weight: normal; color: dodgerblue;">אתה</a>?</h1>
+       
+         <!-- <img  src="url(../../../../../assets/user/man.png" alt="Avatar" class="avatar" > -->
+     
+         <button type="button" id="bsn" class="business-manager" (click)="check('bsn')" ></button>
+        
+         <button type="button" id="usr"  class="user" (click)="check('usr')" ></button>
+     
+         <br/>
+         <!-- <a style="text-align:right;">cgk gcc</a> <a style="text-align:right;">cgk gcc</a> -->
+         <button  style="margin-left:3.2em;margin-right: 35px;" class ="btns">בעל עסק</button>     <button style="margin-right:2.6em;margin-left:3em;"  class ="btns">לקוח</button>
+         <br/>
+         <button value="Click" id="create" type="button" class="btn btn-link">צור חשבון</button>
+         <br/>
+         <br/>
+         <h1 style="font-size: large; margin-bottom:0em;font-weight: lighter;" class="masthead-brand" >כבר יש לך <a style="font-weight: normal; color: dodgerblue;">חשבון</a>?</h1>
+         <h6 style="font-size: medium; margin-bottom:0em;font-weight: lighter;" class="masthead-brand" >כנסו</h6>
+     <div class="form-row">
+       <div class="col"> <input  type="userName" dir="ltr" name="UserName"  id="inputEmail" class="form-control" placeholder="שם משתמש" [(ngModel)]="welcome.UserName" required="" autofocus="" style="width:60%; font-size: small; font-weight: normal;"> </div>
+       <div class="col"> <input  type="password" dir="ltr" name="Password" id="inputPassword" class="form-control" placeholder="סיסמא" [(ngModel)]="welcome.Password" required="must" autofocus="" style="width:60%; font-size: small; font-weight: normal;"> </div>
+     </div>
+       <div class="checkbox mb-3">
+           <label dir="rtl">
+             <input style=" font-size: small; font-weight: lighter;" type="checkbox" value="remember-me"> זכור אותי
+           </label>
+       </div>
+     
+       <div><button class="btn btn-primary" type="submit">כניסה</button></div>
+       <br/>
+       <!-- <p dir="ltr">don't have an account? <a href="http://localhost:4200/customerbusinessmanager">Register Here</a>.</p> -->
+     </form>
+     
+     
+     <!-- <div style="text-align: right;">
+          <img  class="ctaPopup__animation--image" src="https://www.freshbooks.com/wp-content/uploads/2019/11/home-animation-50.gif" alt="popup-image" data-img-src="https://www.freshbooks.com/wp-content/uploads/2019/11/home-animation-50.gif"> 
+         
+       </div>
+        -->
+      
+   

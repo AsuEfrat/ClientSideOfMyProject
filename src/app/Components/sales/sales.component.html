@@ -1,0 +1,35 @@
+<div class="personal">
+  <h1 style=" padding-right: 3em; letter-spacing: 0px; font-size: x-large; margin-right: 50px; margin-bottom:0em;float:inline-start; font-weight: normal ;display: block; text-align: right; margin-top: 30px;" class="masthead-brand" >שלום<a style="margin-top: 30px; font-weight: normal; font-size: x-large;  margin-right: 10px;  color: #007bff; text-align: right;">{{FirstName}}</a>  <button   class="exit"  type="btn">יציאה</button></h1>
+  <h1 class="masthead-brand" >הארנק שלך</h1>  
+
+<div class="frm">
+  <div>
+    <a style="cursor: pointer; padding-right: 12em; padding-left: 12em; padding-bottom: 0.5em; padding-top: 0.5em; margin-right: 2em; margin-top: 1em; border-radius: 10px; text-align: center;  float: right;   text-align: center; background: rgba(199, 221, 247, 0.5); " (click)="showCardDetails()" >פרטי כרטיס</a>
+    <a style="color: #007bff; cursor: pointer; padding-right: 12em; padding-left: 12em; padding-bottom: 0.5em; padding-top: 0.5em; margin-left: 2em; margin-top: 1em; border-radius: 10px; text-align: center; float: left;   text-align: center;      background: rgba(199, 221, 247, 0.5); " (click)="getSales()" > מבצעים</a>
+  </div>
+<div *ngFor="let item of clubsale">
+<img style="position:absolute; float: left; margin-top: 3em; margin-bottom:  2em; margin-left: 5em;" width="350"  src='https://localhost:44380/Images/{{item.Image}}'>
+
+<p style="text-align: center; font-size: large; margin-top: 4em; margin-right: 3em;">{{item.Description}}</p>
+  
+<div style="text-align: right;">
+  <div dir="rtl" style="margin-right: 3em; padding-top: 3em; font-weight: normal;"><label>תאריך התחלת המבצע :   </label> <label style=" margin-right: 1em;" >{{item.SaleStartDate|date:"MM/dd/yyyy"}}</label></div>
+  <div dir="rtl" style="margin-right: 3em; margin-top: 1em; font-weight: normal;"><label>תאריך סיום המבצע :   </label> <label style=" margin-right: 1em;">{{item.SaleEndDate|date:"MM/dd/yyyy"}}</label></div>
+</div>
+
+<!-- <div *ngIf="item.OriginalPrice!=null"><label>מחיר ראשוני</label><div> {{item.OriginalPrice}}</div></div>
+<div *ngIf="item.SalePrice!=null"><label> מחיר לאחר ההנחה</label><div> {{item.SalePrice}}</div></div>
+<br><br> -->
+</div>
+
+<br><br><br>
+<div style="float: right;"><a style="text-align: right;margin-top: 13em; margin-right: 3em;" href="https://{{chainWeb}}" > לפרטים נוספים לחצו כאן כדי להגיע לאתר שלנו **</a></div>
+<br/><br/><br/>
+
+</div>
+</div> 
+
+
+
+
+

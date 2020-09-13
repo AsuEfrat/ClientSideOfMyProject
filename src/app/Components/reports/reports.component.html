@@ -1,0 +1,47 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<form class="personal">
+  <h1 style=" padding-right: 3em; letter-spacing: 0px; font-size: x-large; margin-right: 50px; margin-bottom:0em;float:inline-start; font-weight: normal ;display: block; text-align: right; margin-top: 30px;" class="masthead-brand" >דו"ח קניות לחודש<a style="margin-top: 30px; font-weight: normal; font-size: x-large;  margin-right: 10px;  color: #007bff; text-align: right;">{{thisMonth}}</a> <button style="float: left; margin-left: 2em;" (click)="exportAsXLSX()" class="btn btn-info mb-4 mt-2"> <i class="fa fa-download"></i> Download Excel</button>   <button style="float: left; margin-left: 2em;" (click)="exportAsXLSXAll()" class="btn btn-info mb-4 mt-2"><i class="fa fa-download"></i>  להורדת כל הקניות</button>
+  </h1>
+  <h1  class="masthead-brand">  <a style="margin-top: 30px; font-weight: normal; font-size: medium;  margin-right: 10px;  color: #007bff; text-align: right;">{{thisYear}}</a>שנת</h1>
+  
+  <div class="container" *ngIf="who=='true'" >   
+     <table mdbTable class="z-depth-1" dir="rtl" style="text-align: center;">
+  <thead>
+  <tr>
+    <th style="padding-right: 1.5em;">תאריך</th>
+    <th  >חנות</th>
+    <th  >מחיר קנייה</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let item of CustomerShopping">
+    <th style="padding-right: 1.5em;" scope="row">{{item.ShoppingDate|date:"MM/dd/yyyy"}}</th>
+    <td>{{item.ChainName}}</td>
+    <td>{{item.Price}}</td>
+  </tr>
+  </tbody>
+</table>
+</div>
+<div *ngIf="who=='false'">
+  <table mdbTable class="z-depth-1" dir="rtl" style="text-align: center;">
+    <thead>
+    <tr>
+      <th style="padding-right: 1.5em;">תאריך</th>
+      <th  >ת.ז. לקוח</th>
+      <th  >מחיר קנייה</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let item of reports">
+      <th style="padding-right: 1.5em;" scope="row">{{item.ShoppingDate|date:"MM/dd/yyyy"}}</th>
+      <td>{{item.CustomerId}}</td>
+      <td>{{item.Price}}</td>
+    </tr>
+    </tbody>
+  </table>
+  </div>
+  
+</form>
+
+

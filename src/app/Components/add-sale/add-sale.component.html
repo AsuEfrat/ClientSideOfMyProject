@@ -1,0 +1,18 @@
+<div class="personal"  style="text-align:right;margin-right: 60px;">
+<h1 style="text-align: center;">הוסף מבצע </h1>
+<form  (submit)="register(imageInput)"  dir="rtl">
+    <div><label>שם מבצע:</label><input type="text" name="SaleName" [(ngModel)]="sale.SaleName"/> </div>
+    <div><label>תאור מבצע:</label><input type="text" name="Description"  [(ngModel)]="sale.Description"/> </div>
+    <div><label>התחלת מבצע:</label><input type="date"  name="SaleStartDate" [(ngModel)]="sale.SaleStartDate"> </div>
+    <div><label>סיום מבצע:</label><input  type="date"  name="SaleEndDate" [(ngModel)]="sale.SaleEndDate">  </div>
+    <div><label>תמונה:</label><input  #imageInput type="file"  /> </div>
+    <div><label>מבצע לחבר מועדון?</label><label><input  type="radio" id="option1" name="options"  value="true" [(ngModel)]="sale.ForMembersOnly"/>כן</label>
+                                      <label><input  type="radio"  id="option2" name="options" value="false" [(ngModel)]="sale.ForMembersOnly" />לא</label> </div> 
+    <div><label> מבצע יום הולדת? </label> <label><input  type="radio" id="option11" name="options2" value="true" [(ngModel)]="sale. IsBirthDate" />כן</label>
+                                            <label><input  type="radio"  id="option22" name="options2" value="false"[(ngModel)]="sale. IsBirthDate" />לא</label> </div>
+    <div><label></label>מחיר ראשוני:<input  type="number" name=" OriginalPrice" [(ngModel)]="sale.OriginalPrice"/> </div>
+    <div><label>מחיר לאחר הנחה:</label><input type="number" name="SalePrice" [(ngModel)]="sale.SalePrice"/> </div>
+  <input type="submit" value="הוסף מבצע"/>
+</form>
+<div><button  style="margin-left: 20;" routerLink="">חזור לדף הבית</button></div>
+</div>

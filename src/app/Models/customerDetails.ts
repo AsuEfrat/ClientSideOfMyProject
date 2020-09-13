@@ -6,7 +6,7 @@ export class CustomerDetails{
     id:string;
     phoneNumber:number;
     birthDate:Date;
-    JoinTheWebDate:Date;
+    JoinDate:Date;
 
     constructor()
     {
